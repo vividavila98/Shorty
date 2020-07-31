@@ -1,0 +1,48 @@
+@import './index.scss';
+
+.navigation {
+    padding: 3% 8%;
+    padding-bottom: 1%;
+
+    .logo {
+        margin-right: 30px;
+        padding: 16px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        float: left;
+        a {
+            font-size: .9rem;
+            padding: 16px;
+            display: inline;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: $gray;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: flex-end;
+        .sign-up {
+            background-color: $teal;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 35px;
+            &:hover {
+                color: white; 
+                background-color: $hoverTeal;
+            }
+        }
+    }
+}

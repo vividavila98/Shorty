@@ -1,21 +1,41 @@
 @import './index.scss';
 
-h1 {
-    font-weight: 700;
-    font-size: 5rem;
-    line-height: 6rem;
-}
-
-p {
-    color: $gray;
-    width: 80%;
-    margin-bottom: 40px;
-}
-
-a {
-    background-color: $teal;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 35px;
-    border: 1px solid $teal;
+header.header {
+    padding: 8%;
+    
+    h1.title {
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+    
+    p.sub-text {
+        color: $gray;
+        width: 80%;
+        margin-bottom: 40px;
+        font-size: 1.4rem;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    
+    a.get-started {
+        background-color: $teal;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 35px;
+        &:hover {
+            color: white; 
+            background-color: $hoverTeal;
+        }
+    }
+    .working {
+        @media (max-width: 768px) {
+           
+        }
+        @media (max-width: 576px) {
+            width: 300px;
+            height: 200px;
+        }
+    }
 }
