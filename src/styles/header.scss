@@ -1,0 +1,21 @@
+@import './index.scss';
+
+h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6rem;
+}
+
+p {
+    color: $gray;
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+a {
+    background-color: $teal;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid $teal;
+}
