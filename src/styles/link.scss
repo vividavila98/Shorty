@@ -41,22 +41,39 @@
             font-weight: bold;
         }
         p.stats-sub {
-            color: $gray;
             margin-left: 30%;
             margin-right: 30%;
         }
         .cards-container {
+            padding-top: 5%;
             display: flex;
+            @media (max-width: 567px) {
+                flex-direction: column;
+            }
             text-align: left;
             .card {
                 background-color: white;
                 margin: 10px;
-                padding: 50px;
-                .icon-container {
+                padding: 30px;
+                @media (max-width: 768px) {
+                    padding: 10px;
+
+                }
+                padding-top: 0;
+                border-radius: 5px;
+                h4 {
+                    font-weight: bold;
+                }
+                .icon {
+                    padding: 20px;
+                    margin-bottom: 15px;
                     background-color: $purple;
+                    margin-top: -50px;
+                    border-radius: 50%;
                 }
                 p {
                     font-size: .9rem;
+                    line-height: 1.7rem;
                 }
             }
         }

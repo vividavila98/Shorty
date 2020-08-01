@@ -21,36 +21,36 @@ function Link() {
             with our advanced statistics dashboard.
           </p>
           <div className="cards-container">
-              <div className="card">
-                  <span className="icon-container">
-                    <img src={recognition}/>
-                  </span>
-                  <h4>Brand Recognition</h4>
-                  <p>
-                      Boost your brand recognition with 
-                      each click. Generic links don’t mean a 
-                      thing. Branded links help instil confidence 
-                      in your content.
-                  </p>
-              </div>
-              <div className="card">
-                  <h4>Detailed Records</h4>
-                  <p>
-                      Boost your brand recognition with 
-                      each click. Generic links don’t mean a 
-                      thing. Branded links help instil confidence 
-                      in your content.
-                  </p>
-              </div>
-              <div className="card">
-                  <h4>Fully Customizable</h4>
-                  <p>
-                      Boost your brand recognition with 
-                      each click. Generic links don’t mean a 
-                      thing. Branded links help instil confidence 
-                      in your content.
-                  </p>
-              </div>
+            <div className="card">
+              <img className="icon" src={recognition}/>
+              <h4>Brand Recognition</h4>
+              <p>
+                Boost your brand recognition with 
+                each click. Generic links don’t mean a 
+                thing. Branded links help instil confidence 
+                in your content.
+              </p>
+            </div>
+            <div className="card">
+              <img className="icon" src={detailed}/>
+              <h4>Detailed Records</h4>
+              <p>
+                  Boost your brand recognition with 
+                  each click. Generic links don’t mean a 
+                  thing. Branded links help instil confidence 
+                  in your content.
+              </p>
+            </div>
+            <div className="card">
+            <img className="icon" src={customize}/>
+              <h4>Fully Customizable</h4>
+              <p>
+                  Boost your brand recognition with 
+                  each click. Generic links don’t mean a 
+                  thing. Branded links help instil confidence 
+                  in your content.
+              </p>
+            </div>
           </div>
       </section>
     </div>

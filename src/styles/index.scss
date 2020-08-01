@@ -11,6 +11,7 @@ $hoverTeal: #9AE3E3;
 body, html {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    color: $gray;
     @media (max-width: 992px) {
         font-size: 14px;
     }
