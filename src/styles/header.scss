@@ -6,8 +6,11 @@ header.header {
     
     h1.title {
         font-weight: 700;
-        font-size: 5rem;
+        font-size: 4.5rem;
         line-height: 6rem;
+        @media (max-width: 768px) {
+            width: 90%;
+        }
     }
     
     p.sub-text {
@@ -16,7 +19,7 @@ header.header {
         margin-bottom: 40px;
         font-size: 1.4rem;
         @media (max-width: 768px) {
-            width: 100%;
+            width: 90%;
         }
     }
     
@@ -35,7 +38,7 @@ header.header {
            
         }
         @media (max-width: 576px) {
-            width: 300px;
+            width: 280px;
             height: 200px;
         }
     }

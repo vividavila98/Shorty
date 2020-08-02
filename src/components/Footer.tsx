@@ -23,9 +23,9 @@ function Footer() {
           <Col xs={24} md={4}>
             <h4>Resources</h4>
             <ul>
-              <li>Link Shortening</li>
-              <li>Branded Links</li>
-              <li>Analytics</li>
+              <li>Blog</li>
+              <li>Developers</li>
+              <li>Support</li>
            </ul>
           </Col>
           <Col xs={24} md={4}>

@@ -10,11 +10,19 @@ footer {
     }
     h4 {
         color: white;
+        font-weight: bold;
     }
     ul {
-        color: white;
+        color: $gray;
         list-style-type: none;
         padding: 0;
+        li {
+            margin: 10px 0;
+            &:hover {
+                color: $teal;
+                cursor: pointer;
+            }
+        }
     }
     .icons {
         display: flex;

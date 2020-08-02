@@ -1,18 +1,35 @@
-import React from "react";
-import { Input } from 'antd';
+import React, { useState, useEffect } from "react";
+import { Input, Button } from 'antd';
 import "../styles/link.scss";
 import recognition from "../assets/images/icon-brand-recognition.svg";
 import detailed from "../assets/images/icon-detailed-records.svg";
 import customize from "../assets/images/icon-fully-customizable.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../store";
+import { postUrl } from "../store/session/actions";
 
 function Link() {
+  const dispatch = useDispatch();
+  const shortLink = useSelector(
+    (state: RootState) => state.session.linkReducer.linkObject
+  );
+  const [link, setLink] = useState("");
+  const [displayResults, setDisplayResults] = useState(false);
+
   return (
     <div className="second-section">
       <section className="link">
         <div className="box">
-          <Input className="input" placeholder="Shorten a link here ..." />
-          <a href="#" className="shorten">Shorten It!</a>
+          <Input className="input" placeholder="Shorten a link here ..." value={link} onChange={e => setLink(e.target.value)} />
+          <Button className="shorten" onClick={() => {dispatch(postUrl(link)); setLink(""); setDisplayResults(true)}}>Shorten It!</Button>
         </div>
+       { displayResults && shortLink.url.length > 0 && (
+       <div className="results">
+          <p className="long">{shortLink.url}</p>
+          <a className="short" href={`https://rel.ink/${shortLink.hashid}`} target="_blank"><p>{`https://rel.ink/${shortLink.hashid}`}</p></a>
+          <Button className="copy">Copy</Button>
+        </div>
+        )}
       </section>
       <section className="statistics">
           <h3 className="title">Advanced Statistics</h3>

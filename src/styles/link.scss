@@ -5,6 +5,28 @@
     .link {
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .results {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 75%;
+            margin-top: 1%;
+            border-radius: 10px;
+            color: black;
+            background-color: white;
+            padding: 1%;
+            a.short {
+                color: $teal;
+            }
+            .copy {
+                background-color: $teal;
+                color: white;
+                border-radius: 10px;
+                border: 1px solid $teal;
+            }
+        }
         .box {
             display: flex;
             justify-content: space-evenly;
@@ -22,13 +44,14 @@
                 padding: 10px;
                 border-radius: 10px;
             }
-            a.shorten {
+            .shorten {
                 color: white;
                 background-color: $teal;
-                padding: 10px 20px;
-                border-radius: 10px;
+                border: 1px solid $teal;
+                border-radius: 5px;
                 &:hover {
                     background-color: $hoverTeal;
+                    border: 1px solid $hoverTeal;
                 }
             }
         }
