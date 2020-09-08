@@ -15,14 +15,31 @@ function Link() {
   );
   const [link, setLink] = useState("");
   const [displayResults, setDisplayResults] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <div className="second-section">
       <section className="link">
         <div className="box">
           <Input className="input" placeholder="Shorten a link here ..." value={link} onChange={e => setLink(e.target.value)} />
-          <Button className="shorten" onClick={() => {dispatch(postUrl(link)); setLink(""); setDisplayResults(true)}}>Shorten It!</Button>
+          <Button 
+            className="shorten" 
+            onClick={() => {
+              setLoading(true);
+              dispatch(postUrl(link)); 
+              setLink(""); 
+              setDisplayResults(true);
+              }}>
+              Shorten It!
+          </Button>
         </div>
+        {
+         loading && shortLink.url.length <= 0 && (
+            <div className="loading">
+              <span>.</span><span>.</span><span>.</span>
+            </div>
+          )
+        }
        { displayResults && shortLink.url.length > 0 && (
        <div className="results">
           <p className="long">{shortLink.url}</p>

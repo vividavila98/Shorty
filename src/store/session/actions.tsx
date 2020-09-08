@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk'
 import { AnyAction } from 'redux';
+import { trackPromise } from 'react-promise-tracker';
 
 // Action Definition
 interface PostUrlAction {
@@ -27,12 +28,7 @@ const postedUrl = (data: {}): PostUrlAction => {
 export const postUrl = (url: string) => {
     return async (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<void> => {
         try {
-            console.log("in action");
-            console.log(url);
-            const post = await axios.post(`https://rel.ink/api/links/`,{ 
-                url
-            });
-            const short = await axios.get(`https://rel.ink/api/links/${post.data.hashid}`);
+            const post = await axios.post(`https://rel.ink/api/links/`,{ url });
             dispatch(postedUrl(post.data));
         } catch(err) {
             console.error(err);
