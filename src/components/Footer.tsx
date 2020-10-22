@@ -37,10 +37,10 @@ function Footer() {
           </ul>
           </Col>
           <Col xs={24} md={6} className="icons">
-          <a href="#"><img src={facebook}/></a>
-          <a href="#"><img src={twitter}/></a>
-          <a href="#"><img src={pinterest}/></a>
-          <a href="#"><img src={instagram}/></a>
+          <button className="social">facebook<img src={facebook} alt="facebook"/></button>
+          <button className="social">twitter<img src={twitter} alt="twitter"/></button>
+          <button className="social">pinterest<img src={pinterest} alt="pinterest"/></button>
+          <button className="social">instagram<img src={instagram} alt="instagram"/></button>
           </Col>
         </Row>
     </footer>

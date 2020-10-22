@@ -27,6 +27,11 @@ footer {
     .icons {
         display: flex;
         justify-content: space-evenly;
+        button.social {
+            color: #232127;
+            background-color: #232127;
+            border: none;
+        }
     }
     @media (max-width: 768px) {
         text-align: center;

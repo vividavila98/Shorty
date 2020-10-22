@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { ThunkAction, ThunkDispatch } from 'redux-thunk'
+import { ThunkDispatch } from 'redux-thunk'
 import { AnyAction } from 'redux';
-import { trackPromise } from 'react-promise-tracker';
 
 // Action Definition
 interface PostUrlAction {

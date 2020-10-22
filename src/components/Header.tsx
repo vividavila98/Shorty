@@ -13,7 +13,7 @@ function Header() {
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
-          <a className="get-started" href='#'>Get Started</a>
+          <button className="get-started">Get Started</button>
         </Col>
         <Col xs={12} lg={12}>
           <img src={img} className='working img-fluid' alt='skills' />

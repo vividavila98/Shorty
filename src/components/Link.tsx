@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Input, Button } from 'antd';
 import "../styles/link.scss";
 import recognition from "../assets/images/icon-brand-recognition.svg";
@@ -43,7 +43,7 @@ function Link() {
        { displayResults && shortLink.url.length > 0 && (
        <div className="results">
           <p className="long">{shortLink.url}</p>
-          <a className="short" href={`https://rel.ink/${shortLink.hashid}`} target="_blank"><p>{`https://rel.ink/${shortLink.hashid}`}</p></a>
+          <a className="short" href={`https://rel.ink/${shortLink.hashid}`} target="_blank" rel="noopener noreferrer"><p>{`https://rel.ink/${shortLink.hashid}`}</p></a>
           <Button className="copy">Copy</Button>
         </div>
         )}
@@ -56,7 +56,7 @@ function Link() {
           </p>
           <div className="cards-container">
             <div className="card">
-              <img className="icon" src={recognition}/>
+              <img className="icon" src={recognition} alt="icon"/>
               <h4>Brand Recognition</h4>
               <p>
                 Boost your brand recognition with 
@@ -66,7 +66,7 @@ function Link() {
               </p>
             </div>
             <div className="card">
-              <img className="icon" src={detailed}/>
+              <img className="icon" src={detailed} alt="icon"/>
               <h4>Detailed Records</h4>
               <p>
                   Boost your brand recognition with 
@@ -76,7 +76,7 @@ function Link() {
               </p>
             </div>
             <div className="card">
-            <img className="icon" src={customize}/>
+            <img className="icon" src={customize} alt="icon"/>
               <h4>Fully Customizable</h4>
               <p>
                   Boost your brand recognition with 
