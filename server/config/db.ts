@@ -1,15 +1,20 @@
 import mongoose from "mongoose";
 import config from "config";
 
-const db: string = config.get("mongoURI");
+// use config package to grab global variables from default.json
+const db: string = config.get("mongoURI"); 
 
+// connect to our database
+// mongoose methods return a promise
 export const connectDB = async () => {
+    // try to connect to db using mongoose.connect
     try {
         await mongoose.connect(db, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
         console.log("MongoDB is connected!")
+        // if something goes wrong, print error message
     } catch (err) {
         console.error(err.message);
         process.exit(1);

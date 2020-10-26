@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Create a model schema for URL resource
 const urlSchema = new mongoose.Schema({
     urlCode: String,
     originalUrl: String,
@@ -7,4 +8,4 @@ const urlSchema = new mongoose.Schema({
     date: {type: String, default: Date.now}
 });
 
-module.exports = mongoose.model("Url", urlSchema);
+export const Url = mongoose.model("Url", urlSchema);

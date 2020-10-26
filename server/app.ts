@@ -1,5 +1,5 @@
 import express from "express";
-import { connectDB } from "./config/db";
+import { connectDB } from "./config/db"; // bring in function that connects db
 
 const app = express();
 
@@ -10,8 +10,9 @@ app.use(express.json());
 
 const PORT = 8000;
 
-app.get("/", (req, res) => res.send("Hey!"));
-
+// Define our routes
+app.use("/", require("./routes/index"));
+app.use("/api/url", require("./routes/url"));
 
 app.listen(PORT, () => {
     console.log("Server is running :)");
