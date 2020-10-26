@@ -1,0 +1,6 @@
+POST http://localhost:8000/api/url/shorten
+Content-Type: application/json
+
+{
+    "originalUrl": "https://www.youtube.com/watch?v=Z57566JBaZQ&feature=youtu.be"
+}

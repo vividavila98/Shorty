@@ -1,17 +1,17 @@
 // Our POST route to be able to create a short URL & insert into DB
-import express from "express";
+import express, {Request, Response} from "express";
 const router = express.Router(); //middleware to use app.use()
 import validUrl from "valid-url";
 import shortid from "shortid";
 import config from "config";
 
-import { Url } from "../models/url"; // schema for URLs
+import { UrlModel } from "../models/url"; // schema for URLs
 
 // @route   POST  request to /api/url/shorten endpoint
 // @desc    Create short URL
 
 // Don't need /api/url bc it's connected in app.ts
-router.post("/shorten", async (req: express.Request, res: express.Response) => {
+router.post("/shorten", async (req: Request, res: Response)  => {
     // In req.body, we're gonna send the original URL data with the request
     const { originalUrl } = req.body; 
     const baseUrl:string = config.get("baseUrl");
@@ -29,7 +29,7 @@ router.post("/shorten", async (req: express.Request, res: express.Response) => {
         // If it's valid, check in DB to see if url is already there
         try {
             // use model method: findOne
-            let url = await Url.findOne({ originalUrl });
+            let url = await UrlModel.findOne({ originalUrl });
 
             // if url is in db, send url object which will have the db fields
             if(url) {
@@ -41,7 +41,7 @@ router.post("/shorten", async (req: express.Request, res: express.Response) => {
 
                 // insert url into db following schema model
                 // create instance of this new url object
-                 url = new Url({
+                 url = new UrlModel({
                      originalUrl,
                      shortUrl,
                      urlCode,
@@ -64,5 +64,6 @@ router.post("/shorten", async (req: express.Request, res: express.Response) => {
     }
 
 });
+
 
 module.exports = router;
