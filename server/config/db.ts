@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-process.env.NODE_CONFIG_DIR = './';
 import config from "config";
 
 // use config package to grab global variables from default.json
