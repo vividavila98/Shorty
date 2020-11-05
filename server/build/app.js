@@ -11,7 +11,6 @@ db_1.connectDB();
 app.use(express_1.default.json());
 const PORT = process.env.PORT || 8000;
 // Define our routes
-app.get('/', (req, res) => { res.send('Hello from Express!');
 app.use("/", require("./routes/index"));
 app.use("/api/url", require("./routes/url"));
 app.listen(PORT, () => {
