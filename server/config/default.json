@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://vividavila98:PZD50p35VKTX0384@cluster0.gqrtr.mongodb.net/shortlyDB?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:8000"
+}
