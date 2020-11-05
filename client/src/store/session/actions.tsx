@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ThunkDispatch } from 'redux-thunk'
+import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
 
 // Action Definition
@@ -16,7 +16,6 @@ interface GetShortUrl {
 export type LinkActionTypes = PostUrlAction | GetShortUrl;
 
 // Action Creator
-
 const postedUrl = (data: {}): PostUrlAction => {
     return {
       type: "POST_URL",
@@ -24,13 +23,13 @@ const postedUrl = (data: {}): PostUrlAction => {
     }
   }
 
-export const postUrl = (url: string) => {
+export const postUrl = (originalUrl: string) => {
     return async (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<void> => {
         try {
-            const post = await axios.post(`https://rel.ink/api/links/`,{ url });
+            const post = await axios.post(`/api/url/shorten`, { originalUrl });
             dispatch(postedUrl(post.data));
         } catch(err) {
             console.error(err);
         }
     }
-}
+};

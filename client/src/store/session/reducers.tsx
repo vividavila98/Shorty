@@ -3,9 +3,10 @@ import { combineReducers } from 'redux'
 
 export interface LinkState {
     linkObject: {
-        hashid: string, 
-        url: string,
-        created_at: string
+        originalUrl: string, 
+        shortUrl: string,
+        urlCode: string,
+        date: string
     }
 };
 
@@ -15,9 +16,10 @@ export interface State {
 
 const initialLinkState: LinkState = {
     linkObject: {
-        hashid: "",
-        url: "",
-        created_at: ""
+        originalUrl: "", 
+        shortUrl: "",
+        urlCode: "",
+        date: ""
     }
 };
 
@@ -28,9 +30,10 @@ function linkReducer(state: LinkState = initialLinkState, action: LinkActionType
             return {
                 ...state,
               linkObject: {
-                  hashid: action.payload.hashid,
-                  url: action.payload.url,
-                  created_at: action.payload.created_at
+                originalUrl: action.payload.originalUrl, 
+                shortUrl: action.payload.shortUrl,
+                urlCode: action.payload.urlCode,
+                date: action.payload.date
               }
             }
             default:

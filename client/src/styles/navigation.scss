@@ -17,6 +17,11 @@
     .logo {
         margin-right: 30px;
         padding: 16px;
+        img {
+            @media(max-width: 768px) {
+                height: 25px;
+            }
+        }
     }
 
     ul {

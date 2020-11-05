@@ -1,0 +1,6 @@
+POST http://localhost:8000/api/url/shorten
+Content-Type: application/json
+
+{
+    "originalUrl": "https://medium.com/@keller.f.peter/how-to-create-a-rest-api-with-typescript-and-mongoose-b2a575a1dd4f"
+}

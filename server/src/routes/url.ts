@@ -23,6 +23,7 @@ router.post("/shorten", async (req: Request, res: Response)  => {
 
     // Create URl code
     const urlCode:string = shortid.generate();
+    console.log(`urlcode in url.ts: ${urlCode}`);
 
     // Check if originalUrl is valid
     if(validUrl.isUri(originalUrl)) {
@@ -38,6 +39,7 @@ router.post("/shorten", async (req: Request, res: Response)  => {
                 // if not, construct short URL
                 // localhost/8000 + / + shortid code
                 const shortUrl: string = baseUrl + "/" + urlCode;
+                console.log(`short url in url.ts: ${shortUrl}`);
 
                 // insert url into db following schema model
                 // create instance of this new url object
@@ -56,6 +58,7 @@ router.post("/shorten", async (req: Request, res: Response)  => {
             }
         } catch (err) {
             console.error(err);
+            console.log("in url.ts");
             res.status(500).json("Server error probably");
         }
     } else {

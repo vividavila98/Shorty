@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button } from 'antd';
+import { Input, Button, Row, Col } from 'antd';
 import "../styles/link.scss";
 import recognition from "../assets/images/icon-brand-recognition.svg";
 import detailed from "../assets/images/icon-detailed-records.svg";
@@ -34,18 +34,24 @@ function Link() {
           </Button>
         </div>
         {
-         loading && shortLink.url.length <= 0 && (
+         loading && shortLink.originalUrl.length <= 0 && (
             <div className="loading">
               <span>.</span><span>.</span><span>.</span>
             </div>
           )
         }
-       { displayResults && shortLink.url.length > 0 && (
-       <div className="results">
-          <p className="long">{shortLink.url}</p>
-          <a className="short" href={`https://rel.ink/${shortLink.hashid}`} target="_blank" rel="noopener noreferrer"><p>{`https://rel.ink/${shortLink.hashid}`}</p></a>
-          <Button className="copy">Copy</Button>
-        </div>
+       { displayResults && shortLink.originalUrl.length > 0 && (
+       <Row className="results">
+         <Col xs={10}>
+         <p className="long">{shortLink.originalUrl}</p>
+         </Col>
+          <Col xs={10}>
+            <a className="short" href={`${shortLink.shortUrl}`} target="_blank" rel="noopener noreferrer"><p>{shortLink.shortUrl}</p></a>
+          </Col>
+          <Col xs={4}>
+            <Button className="copy">Copy</Button>
+          </Col>
+        </Row>
         )}
       </section>
       <section className="statistics">
