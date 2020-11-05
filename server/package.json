@@ -11,8 +11,7 @@
     "author": "",
     "start": "node build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+    "build": "npx tsc"
   },
   "author": "",
   "license": "ISC",
