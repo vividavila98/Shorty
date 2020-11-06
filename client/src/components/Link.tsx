@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Input, Button, Row, Col } from 'antd';
 import "../styles/link.scss";
-import axios from 'axios';
 import recognition from "../assets/images/icon-brand-recognition.svg";
 import detailed from "../assets/images/icon-detailed-records.svg";
 import customize from "../assets/images/icon-fully-customizable.svg";
@@ -17,15 +16,6 @@ function Link() {
   const [link, setLink] = useState("");
   const [displayResults, setDisplayResults] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const getShortUrl = async () => {
-    const short = axios.get(`https://cors-anywhere.herokuapp.com/https://vd-shortly.herokuapp.com/api/url/${shortLink.urlCode}`);
-    console.log(short);
-  }
-
-  useEffect(() => {
-    getShortUrl();
-  }, [displayResults]);
 
   return (
     <div className="second-section">
