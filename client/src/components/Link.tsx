@@ -17,6 +17,8 @@ function Link() {
   const [displayResults, setDisplayResults] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  console.log(shortLink.shortUrl);
+
   return (
     <div className="second-section">
       <section className="link">

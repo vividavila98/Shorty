@@ -65,7 +65,6 @@ router.post("/shorten", async (req: Request, res: Response)  => {
         // if the originalUrl is not valid
         res.status(401).json("Invalid original Url");
     }
-
 });
 
 
