@@ -11,7 +11,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 8000;
 
 // Define our routes
-app.get('/test', (req, res) => { res.send('Hello from Express!')});
+app.get('/testing', (req, res) => { res.send('Hello from Express!')});
 app.use("/", require("./routes/index"));
 app.use("/api/url", require("./routes/url"));
 
