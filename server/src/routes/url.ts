@@ -38,7 +38,7 @@ router.post("/shorten", async (req: Request, res: Response)  => {
             } else {
                 // if not, construct short URL
                 // localhost/8000 + / + shortid code
-                const shortUrl: string = baseUrl + urlCode;
+                const shortUrl: string = baseUrl + "/" + urlCode;
                 console.log(`short url in url.ts: ${shortUrl}`);
 
                 // insert url into db following schema model
