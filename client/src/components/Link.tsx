@@ -44,14 +44,11 @@ function Link() {
         }
        { displayResults && shortLink.originalUrl.length > 0 && (
        <Row className="results">
-         <Col xs={24} sm={10}>
-         <p className="long">{shortLink.originalUrl}</p>
+         <Col xs={24} sm={12}>
+         <a className="long" href={`${shortLink.originalUrl}`} target="_blank" rel="noopener noreferrer"><p>{shortLink.originalUrl}</p></a>
          </Col>
-          <Col xs={24} sm={10}>
+          <Col xs={24} sm={12}>
             <a className="short" href={`${shortLink.shortUrl}`} target="_blank" rel="noopener noreferrer"><p>{shortLink.shortUrl}</p></a>
-          </Col>
-          <Col xs={24} sm={4}>
-            <Button className="copy">Copy</Button>
           </Col>
         </Row>
         )}

@@ -60,11 +60,11 @@
                 align-items: center;
                 justify-content: center;
             }
-            p {
-                width: 80%;
-            }
             a.short {
                 color: $teal;
+            }
+            a.long {
+                color: black;
             }
             .copy {
                 background-color: $teal;
