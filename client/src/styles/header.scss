@@ -1,57 +1,59 @@
 @import './index.scss';
 
 header.header {
-    padding: 8%;
-    padding-bottom: 13%;
-    
-    h1.title {
-        font-weight: 700;
-        font-size: 4.5rem;
-        line-height: 6rem;
+  padding: 100px 0;
+
+  h1.title {
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+
+  p.sub-text {
+    width: 80%;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+
+  button.get-started {
+    background-color: $purple;
+    border:none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    &:hover {
+        background-color: $lightPurple;
+        cursor: pointer;
     }
-    
-    p.sub-text {
-        color: $gray;
-        width: 80%;
-        margin-bottom: 40px;
-        font-size: 1.4rem;
-    }
-    
-    button.get-started {
-        background-color: $teal;
-        border:none;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 35px;
-        &:hover {
-            color: white; 
-            background-color: $hoverTeal;
-        }
-    }
-    .working {
-        height: 395px;
-    }
+  }
+
+  .img-container {
+    text-align: right;
+  }
+  .working {
+    width: 70%;
+  }
 }
 
 
 /* Media Queries */
 @media (max-width: 1199px) {
-    header.header {
-        h1.title {
-            font-size: 4rem;
-            line-height: 4.5rem;;
-        }
-        img.working{height: 300px;}
+  header.header {
+    h1.title {
+      font-size: 4rem;
+      line-height: 4.5rem;;
     }
+    img.working{height: 300px;}
+  }
 }
 
 @media (max-width: 991px) {
     
 }
+
 @media (max-width: 767px) {
-    header.header {
-        img.working {
-            height: 220px;
-        }
+  header.header {
+    img.working {          
+      height: 220px;
     }
+  }
 }

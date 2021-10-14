@@ -1,26 +1,23 @@
 import React from "react";
 import { Row, Col } from "antd";
 import "../styles/header.scss";
-import img from "../assets/images/illustration-working.svg";
+import img from "../assets/images/computer.png";
 
-function Header() {
+export default function Header() {
   return (
-    <header className='header'>
-      <Row>
+    <header className='header container'>
+      <Row justify="space-between" align="middle"> 
         <Col xs={24} lg={12}>
-          <h1 className="title">More than just shorter links</h1>
+          <h1 className="title">Send Shorter Links Instantly</h1>
           <p className="sub-text">
-            Build your brand’s recognition and get detailed insights on how your
-            links are performing.
+          Shortly allows you to shorten long URLs to links as little as 20 characters.
           </p>
           <button className="get-started">Get Started</button>
         </Col>
-        <Col xs={12} lg={12}>
+        <Col xs={12} lg={12} className="img-container">
           <img src={img} className='working img-fluid' alt='skills' />
         </Col>
       </Row>
     </header>
   );
 }
-
-export default Header;

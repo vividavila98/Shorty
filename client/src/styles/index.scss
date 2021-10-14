@@ -1,26 +1,50 @@
 @import '~antd/dist/antd.css';
 
-$black: #34313D;
-$darkPurple: #3A3054;
-$purple: #4B3F6B;
+$black: #000000;
+$background: #DCE7F1;
+$purple: #2A1E50;
+$lightPurple: #382D5C;
+$orange: #DD6851;
+$darkOrange: #CB5D47;
+
+$darkPurple: #4B3F6B;
 $gray: #9E9AA8;
 $white: #EFF1F7;
 $teal: #2BD0D0;
 $hoverTeal: #9AE3E3;
 
 body, html {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: $gray;
-    width: 100%;
-    @media (max-width: 992px) {
-        font-size: 14px;
-    }
-    @media (max-width: 768px) {
-        font-size: 12px;
-    }
-    @media (max-width: 576px) {
-        font-size: 10px;
-    }
+  background: $background;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
+  color: $black;
+  width: 100%;
+  @media (max-width: 992px) {
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+  @media (max-width: 576px) {
+    font-size: 10px;
+  }
 }
 
+.container {
+  max-width: 915px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 25px;
+  }
+}

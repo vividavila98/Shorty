@@ -12,141 +12,97 @@
     }
 }
 
-.second-section {
-    background-color: $white;
-    .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 75%;
-            margin-top: 1%;
-            border-radius: 10px;
-            color: black;
-            background-color: white;
-            padding: 1%; 
-            span {
-                font-size: 30px;
-                animation-name: blink;
-                animation-duration: 1.4s;
-                animation-iteration-count: infinite;
-                animation-fill-mode: both;
-            }
-            span:nth-child(2) {
-                animation-delay: .2s;
-            }
-            span:nth-child(3) {
-                animation-delay: .4s;
-            }
-        }
-        .results {
-            width: 75%;
-            margin-top: 1%;
-            border-radius: 10px;
-            color: black;
-            background-color: white;
-            padding: 1%;
-            @media (max-width: 768px) {
-                text-align: center;
-
-            }
-            // .ant-col {
-            //     display: flex;
-            //     flex-direction: column;
-            //     align-items: center;
-            //     justify-content: center;
-            // }
-            a.short {
-                color: $teal;
-            }
-            a.long {
-                color: black;
-                overflow-wrap: anywhere;
-            }
-            .copy {
-                background-color: $teal;
-                color: white;
-                border-radius: 10px;
-                border: 1px solid $teal;
-            }
-        }
-        .box {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            background-color: $darkPurple;
-            width: 75%;
-            height: 150px;
-            color: white;
-            margin-top: -5%;
-            border-radius: 10px;
-            background-image: url("../assets/images/bg-shorten-desktop.svg");
-            background-size: cover;
-            .input {
-                width: 50%;
-                padding: 10px;
-                border-radius: 10px;
-            }
-            .shorten {
-                color: white;
-                background-color: $teal;
-                border: 1px solid $teal;
-                border-radius: 5px;
-                &:hover {
-                    background-color: $hoverTeal;
-                    border: 1px solid $hoverTeal;
-                }
-            }
-        }
+.link {
+  padding: 0;
+  padding-bottom: 50px;
+  .box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $purple;
+    height: 150px;
+    border-radius: 5px;
+    background-image: url("../assets/images/link-bg.svg");
+    background-size: cover;
+    .input {
+        width: 50%;
+        padding: 10px;
+        border-radius: 5px;
     }
-    .statistics {
+    .shorten {
+        color: white;
+        background-color: $orange;
+        border: none;
+        border-radius: 5px;
+        &:hover {
+            background-color: $darkOrange;
+        }
+      }
+    }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    padding: 1%; 
+    span {
+        font-size: 30px;
+        animation-name: blink;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+    }
+    span:nth-child(2) {
+        animation-delay: .2s;
+    }
+    span:nth-child(3) {
+        animation-delay: .4s;
+    }
+  }
+
+  .results {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    padding: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    @media (max-width: 768px) {
         text-align: center;
-        padding: 8%;
-        h3.title {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        p.stats-sub {
-            margin-left: 30%;
-            margin-right: 30%;
-        }
-        .cards-container {
-            padding-top: 5%;
-            display: flex;
-            @media (max-width: 567px) {
-                flex-direction: column;
-            }
-            text-align: left;
-            .card {
-                background-color: white;
-                margin: 10px;
-                padding: 30px;
-                @media (max-width: 768px) {
-                    padding: 10px;
-                    margin-bottom: 50px;
 
-                }
-                padding-top: 0;
-                border-radius: 5px;
-                h4 {
-                    font-weight: bold;
-                }
-                .icon {
-                    padding: 20px;
-                    margin-bottom: 15px;
-                    background-color: $purple;
-                    margin-top: -50px;
-                    border-radius: 50%;
-                }
-                p {
-                    font-size: .9rem;
-                    line-height: 1.7rem;
-                }
-            }
-        }
     }
+    a.short {
+        color: $orange;
+    }
+    a.long {
+        color: $black;
+        display: block;
+        text-overflow: ellipsis;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    a.long p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 200px;
+        vertical-align: middle;
+    }
+    p {
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: sub;
+    }
+    .copy {
+        background-color: $purple;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+    }
+  }
 }
