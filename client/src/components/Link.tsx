@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store";
+import { useDispatch } from "react-redux";
 import { postUrl } from "../store/session/actions";
 import "../styles/link.scss";
 import Results from "./Results";
