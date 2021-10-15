@@ -1,7 +1,8 @@
 @import './index.scss';
 
 header.header {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   h1.title {
     font-weight: 700;
@@ -36,15 +37,15 @@ header.header {
 
 
 /* Media Queries */
-@media (max-width: 1199px) {
-  header.header {
-    h1.title {
-      font-size: 4rem;
-      line-height: 4.5rem;;
-    }
-    img.working{height: 300px;}
-  }
-}
+// @media (max-width: 1199px) {
+//   header.header {
+//     h1.title {
+//       font-size: 4rem;
+//       line-height: 4.5rem;;
+//     }
+//     img.working{height: 300px;}
+//   }
+// }
 
 @media (max-width: 991px) {
     
@@ -52,8 +53,11 @@ header.header {
 
 @media (max-width: 767px) {
   header.header {
-    img.working {          
-      height: 220px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    p.sub-text {
+      width: 100%;
     }
   }
 }

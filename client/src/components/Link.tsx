@@ -11,6 +11,7 @@ export default function Link() {
   const [link, setLink] = useState("");
   const [displayResults, setDisplayResults] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleClick = () => {
     setLoading(true);
@@ -20,13 +21,18 @@ export default function Link() {
   }
 
   const handleChange = (e:any) => {
-    setLink(e.target.value)
+    setLink(e.target.value);
+    setCopied(false);
+  }
+
+  const handleCopy = () => {
+    setCopied(true);
   }
 
   return (
       <section className="link container">
-        <InputField  link={link} handleClick={handleClick} handleChange={handleChange}/>
-        <Results loading={loading} displayResults={displayResults} />
+        <InputField link={link} handleClick={handleClick} handleChange={handleChange}/>
+        <Results loading={loading} displayResults={displayResults} handleCopy={handleCopy} copied={copied}/>
       </section>
   );
 };

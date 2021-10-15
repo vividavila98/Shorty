@@ -12,10 +12,13 @@ export default function Input(props: any) {
             value={link} 
             onChange={handleChange} 
           />
+          
           <Button 
             className="shorten" 
-            onClick={handleClick}>
-              Shorten It!
+            onClick={handleClick}
+            disabled={!link}
+            >
+            Shorten It!
           </Button>
         </div>
     )

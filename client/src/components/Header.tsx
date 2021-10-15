@@ -14,7 +14,7 @@ export default function Header() {
           </p>
           <button className="get-started">Get Started</button>
         </Col>
-        <Col xs={12} lg={12} className="img-container">
+        <Col xs={0} lg={12} className="img-container">
           <img src={img} className='working img-fluid' alt='skills' />
         </Col>
       </Row>

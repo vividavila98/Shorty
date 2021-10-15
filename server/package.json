@@ -17,11 +17,13 @@
   "license": "ISC",
   "dependencies": {
     "@types/config": "0.0.36",
+    "@types/cors": "^2.8.12",
     "@types/mongoose": "^5.7.36",
     "@types/shortid": "0.0.29",
     "@types/valid-url": "^1.0.3",
     "ansi-regex": "^6.0.1",
     "config": "^3.3.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "glob-parent": "^6.0.2",
     "ini": "^2.0.0",

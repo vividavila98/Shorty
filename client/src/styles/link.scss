@@ -79,30 +79,34 @@
         color: $orange;
     }
     a.long {
-        color: $black;
-        display: block;
-        text-overflow: ellipsis;
-        width: 200px;
-        overflow: hidden;
-        white-space: nowrap;
+      color: $black;
+      display: block;
+      text-overflow: ellipsis;
+      width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     a.long p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 200px;
-        vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 200px;
     }
     p {
-        margin-bottom: 0;
-        display: inline-block;
-        vertical-align: sub;
+      margin-bottom: 0;
+      display: inline-block;
+      vertical-align: -webkit-baseline-middle;
     }
     .copy {
-        background-color: $purple;
-        border-radius: 5px;
-        border: none;
-        color: #fff;
+      background-color: $purple;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      &:hover {
+          cursor: pointer;
+          background-color: $darkPurple;
+      }
     }
   }
 }
