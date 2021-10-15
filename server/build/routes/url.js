@@ -17,6 +17,7 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router(); //middleware to use app.use()
 const valid_url_1 = __importDefault(require("valid-url"));
 const shortid_1 = __importDefault(require("shortid"));
+const config_1 = __importDefault(require("config"));
 const url_1 = require("../models/url"); // schema for URLs
 // @route   POST  request to /api/url/shorten endpoint
 // @desc    Create short URL
@@ -24,8 +25,9 @@ const url_1 = require("../models/url"); // schema for URLs
 router.post("/shorten", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // In req.body, we're gonna send the original URL data with the request
     const { originalUrl } = req.body;
-    // const baseUrl:string = config.get("baseUrl");
-    const baseUrl = "lilll.link";
+    const baseUrl = config_1.default.get("baseUrl");
+    // const baseUrl:string = "lilll.link";
+    console.log("hello in route");
     // Check if baseURl is not valid 
     if (!valid_url_1.default.isUri(baseUrl)) {
         return res.status(401).json("Invalid base URL");
@@ -42,6 +44,7 @@ router.post("/shorten", (req, res) => __awaiter(void 0, void 0, void 0, function
             // if url is in db, send url object which will have the db fields
             if (url) {
                 res.json(url);
+                console.log("in if url");
             }
             else {
                 // if not, construct short URL

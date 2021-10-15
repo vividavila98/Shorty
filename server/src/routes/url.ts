@@ -14,8 +14,10 @@ import { UrlModel } from "../models/url"; // schema for URLs
 router.post("/shorten", async (req: Request, res: Response)  => {
     // In req.body, we're gonna send the original URL data with the request
     const { originalUrl } = req.body; 
-    // const baseUrl:string = config.get("baseUrl");
-    const baseUrl:string = "lilll.link";
+    const baseUrl:string = config.get("baseUrl");
+    // const baseUrl:string = "lilll.link";
+
+    console.log("hello in route");
 
     // Check if baseURl is not valid 
     if(!validUrl.isUri(baseUrl)) {
@@ -32,10 +34,11 @@ router.post("/shorten", async (req: Request, res: Response)  => {
         try {
             // use model method: findOne
             let url = await UrlModel.findOne({ originalUrl });
-
+            
             // if url is in db, send url object which will have the db fields
             if(url) {
                 res.json(url);
+                console.log("in if url");
             } else {
                 // if not, construct short URL
                 // localhost/8000 + / + shortid code

@@ -12,7 +12,7 @@ export default function Header() {
           <p className="sub-text">
           Shortly allows you to shorten long URLs to links as little as 20 characters.
           </p>
-          <button className="get-started">Get Started</button>
+          {/* <button className="get-started">Get Started</button> */}
         </Col>
         <Col xs={0} lg={12} className="img-container">
           <img src={img} className='working img-fluid' alt='skills' />
