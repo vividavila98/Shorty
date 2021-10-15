@@ -10,7 +10,7 @@ const app = express_1.default();
 // Connect to database
 db_1.connectDB();
 app.use(express_1.default.json());
-app.use(cors_1.default({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors_1.default({ credentials: true, origin: 'https://www.lill.link/' }));
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log("Server is running!");
