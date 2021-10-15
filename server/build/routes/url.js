@@ -23,8 +23,6 @@ const url_1 = require("../models/url"); // schema for URLs
 // @desc    Create short URL
 // Don't need /api/url bc it's connected in app.ts
 router.post("/shorten", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS,GET,PUT,POST,DELETE');
-    res.setHeader('Access-Control-Allow-Origin', 'https://www.lill.link/');
     // In req.body, we're gonna send the original URL data with the request
     const { originalUrl } = req.body;
     const baseUrl = config_1.default.get("baseUrl");

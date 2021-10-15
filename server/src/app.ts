@@ -1,6 +1,5 @@
 import express from "express";
 import { connectDB } from "./config/db"; // bring in function that connects db
-import cors from "cors";
 
 const app = express();
 
@@ -8,7 +7,6 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors({credentials: true, origin: 'https://www.lill.link/'}));
 
 const PORT = process.env.PORT || 8000;
 

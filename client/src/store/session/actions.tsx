@@ -26,8 +26,7 @@ const postedUrl = (data: {}): PostUrlAction => {
 export const postUrl = (originalUrl: string) => {
     return async (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<void> => {
         try {
-            // const post = await axios.post(`https://obscure-oasis-27229.herokuapp.com/https://vd-shortly.herokuapp.com/api/url/shorten`, { originalUrl });
-            const post = await axios.post(`https://vd-shortly.herokuapp.com/api/url/shorten`, { originalUrl }, {withCredentials: true});
+            const post = await axios.post(`https://obscure-oasis-27229.herokuapp.com/https://vd-shortly.herokuapp.com/api/url/shorten`, { originalUrl });
             dispatch(postedUrl(post.data));
         } catch(err) {
             console.error(err);
