@@ -12,6 +12,7 @@ import { UrlModel } from "../models/url"; // schema for URLs
 
 // Don't need /api/url bc it's connected in app.ts
 router.post("/shorten", async (req: Request, res: Response)  => {
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS,GET,PUT,POST,DELETE');
     // In req.body, we're gonna send the original URL data with the request
     const { originalUrl } = req.body; 
     const baseUrl:string = config.get("baseUrl");
