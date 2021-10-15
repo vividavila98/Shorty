@@ -9,11 +9,12 @@ const app = express_1.default();
 // Connect to database
 db_1.connectDB();
 app.use(express_1.default.json());
+// app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 const PORT = process.env.PORT || 8000;
 // Define our routes
-app.get('/test', (req, res) => { res.send('Hello from Express!'); });
+app.get('/testing', (req, res) => { res.send('Hello from Express!'); });
 app.use("/", require("./routes/index"));
 app.use("/api/url", require("./routes/url"));
 app.listen(PORT, () => {
-    console.log("Server is running :)");
+    console.log("Server is running!");
 });

@@ -18,5 +18,5 @@ app.use("/", require("./routes/index"));
 app.use("/api/url", require("./routes/url"));
 
 app.listen(PORT, () => {
-    console.log("Server is running :)");
+    console.log("Server is running!");
 });

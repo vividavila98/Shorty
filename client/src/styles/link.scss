@@ -72,8 +72,8 @@
     display: flex;
     justify-content: space-evenly;
     @media (max-width: 768px) {
-        text-align: center;
-
+      text-align: center;
+      flex-direction: column;
     }
     a.short {
         color: $orange;
@@ -85,6 +85,9 @@
       width: 200px;
       overflow: hidden;
       white-space: nowrap;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     a.long p {
@@ -96,6 +99,9 @@
       margin-bottom: 0;
       display: inline-block;
       vertical-align: -webkit-baseline-middle;
+      @media (max-width: 768px) {
+        margin-bottom: 15px;
+      }
     }
     .copy {
       background-color: $purple;

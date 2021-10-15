@@ -14,7 +14,8 @@ import { UrlModel } from "../models/url"; // schema for URLs
 router.post("/shorten", async (req: Request, res: Response)  => {
     // In req.body, we're gonna send the original URL data with the request
     const { originalUrl } = req.body; 
-    const baseUrl:string = config.get("baseUrl");
+    // const baseUrl:string = config.get("baseUrl");
+    const baseUrl:string = "lilll.link";
 
     // Check if baseURl is not valid 
     if(!validUrl.isUri(baseUrl)) {
