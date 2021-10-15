@@ -8,7 +8,7 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors({credentials: true, origin: 'https://www.lill.link/'}));
+app.use(cors({credentials: true, origin: 'https://www.lill.link'}));
 
 const PORT = process.env.PORT || 8000;
 
