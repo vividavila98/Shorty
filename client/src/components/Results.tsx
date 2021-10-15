@@ -24,7 +24,7 @@ export default function Results(props: any) {
       <a className="long" href={`${shortLink.originalUrl}`} target="_blank" rel="noopener noreferrer"><p>{shortLink.originalUrl}</p></a>
       <a className="short" href={`${shortLink.shortUrl}`} target="_blank" rel="noopener noreferrer"><p>{shortLink.shortUrl.slice(12)}</p></a>
 
-      <CopyToClipboard text={shortLink.shortUrl.slice(12)}
+      <CopyToClipboard text={shortLink.shortUrl.slice(8)}
         onCopy={handleCopy}>
         <button className="copy">{copied ? "Copied!": "Copy"}</button>
       </CopyToClipboard>
