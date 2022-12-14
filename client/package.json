@@ -19,7 +19,7 @@
     "antd": "^4.5.1",
     "axios": "^0.21.2",
     "cors-anywhere": "^0.4.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http-proxy": "^1.18.1",
     "ini": "^2.0.0",
     "mpath": "^0.8.4",
