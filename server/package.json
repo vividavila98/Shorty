@@ -27,7 +27,7 @@
     "express": "^4.17.1",
     "glob-parent": "^6.0.2",
     "ini": "^2.0.0",
-    "mongoose": "^5.10.10",
+    "mongoose": "^5.13.15",
     "mpath": "^0.8.4",
     "mquery": "^4.0.0",
     "normalize-url": "^7.0.2",
